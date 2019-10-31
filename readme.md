@@ -149,3 +149,15 @@ In order to get as much data as we can, we are not updating the favourite film, 
 The React template has been taken from a secondary source in order to speed up the development. Neverheless, there were some major issues with React and axios not making the requests properly, and it is explained under the "Warnings, and improvements for the future release" section.
 
 # Warnings, and improvements for the future release
+
+- The main issue with this code is React's inability to send the proper POST and PUT request while working with Spring Boot. Requests to Spring Boot have been tested with a PostMan, with the same headers, and Spring Boot did not complain and throw error messages like it did with React. This has been solved by using "application/x-www-form-urlencoded" header with the axios (same issue was happening with fetch) and using POST instead of a PUT. The result is very ugly since we are getting the string withing a Spring Boot that is not in JSON format and that needs to be re-formatted. Again, this is an issue with React.js !
+
+- While running the react application, we may be getting a message regarding the two very low potential security issues. For the purpose of this project, it can be tolerated, however, in the real production this should not be the case.
+
+- While running the Spring Boot, we get a warning which is caused by the java language version being too high (if java 11 is used).
+
+- While running the application and saving the user's favourite film, we are not displaying the favourite film once the user re-visits the page. This is not a part of the assignment, but can be improved in the future.
+
+- Instead of relying on the IP address, we can use cookies to remember the users.
+
+
