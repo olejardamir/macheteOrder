@@ -13,9 +13,18 @@ Technology stack is: MySQL (Maria fork) for database, Spring-Boot for the backen
 Everything will be done with the Chrome browser given the CORS plugin that works out-of-box.
 
 ## Main Setup
-### Lamp stack with phpmyadmin (admin/admin has all SQL privileges)
 
 $ sudo apt-get update && sudo apt-get upgrade
+
+### Git for project and SQL setup
+
+$ sudo apt-get install git
+
+$ git clone https://github.com/olejardamir/macheteOrder.git
+
+
+### Lamp stack with phpmyadmin (admin/admin has all SQL privileges)
+
 
 $ sudo apt install apache2
 
