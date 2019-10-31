@@ -34,6 +34,8 @@ $ sudo apt install php php-common php-mysql php-gd php-cli
 
 $ sudo apt install phpmyadmin
 
+[select apache, format db, and enter your db password to use]
+
 $ sudo systemctl restart apache2
 
 $ sudo mysql -u root -p
