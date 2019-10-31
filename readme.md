@@ -6,6 +6,8 @@ Please choose the steps that you need, should you like to speed-up the setup pro
 
 Technology stack is: MySQL (Maria fork) for database, Spring-Boot for the backend, and React.js for the front-end service.
 
+Everything will be done with the Chrome browser given the CORS plugin that works out-of-box.
+
 ## Main Setup
 
 ## Database Setup
@@ -14,5 +16,8 @@ mvn clean install
 mvn spring-boot:run
 
 ## React Setup and Run
+
+## Additional tools
+CORS plugin for Chrome
 
 
