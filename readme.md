@@ -120,7 +120,7 @@ $ mvn spring-boot:run
 
 [install CORS plugin in Chrome https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en]
 
-### Final Application Run
+# Final Application Run
 Go to http://localhost:8080/ (in Chrome)
 
 Press the CORS plugin button (upper right corner) to activate it
