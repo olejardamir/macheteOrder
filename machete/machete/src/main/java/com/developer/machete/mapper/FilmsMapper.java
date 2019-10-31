@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 
 import com.developer.machete.model.FavouriteFilm;
 import com.developer.machete.model.Films;
-import com.developer.machete.model.Query;
+import com.developer.machete.model.UserQuery;
 
 @Mapper
 public interface FilmsMapper {
@@ -21,7 +21,7 @@ public interface FilmsMapper {
  
     
     @Insert("insert into queries(query,ip) values(#{query},#{ip})")
-    void insertQueryData(Query query);
+    void insertQueryData(UserQuery query);
     
     @Insert("insert into favourites(imdb_id,ip) values(#{imdb_id},#{ip})")
 	void insertFavouriteFilm(FavouriteFilm favouriteFilm);

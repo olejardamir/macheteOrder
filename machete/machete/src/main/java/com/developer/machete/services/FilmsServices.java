@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import com.developer.machete.mapper.FilmsMapper;
 import com.developer.machete.model.FavouriteFilm;
 import com.developer.machete.model.Films;
-import com.developer.machete.model.Query;
+import com.developer.machete.model.UserQuery;
 import com.google.gson.Gson;
 
 @Configuration
@@ -32,12 +32,12 @@ public class FilmsServices {
 		return gson.toJson(films);
 	}
 	
- 	public Boolean insertQueryData(Query query) { 
+ 	public Boolean insertQueryData(UserQuery query) { 
 		filmsMapper.insertQueryData(query);
 		return true;
 	}
 
-	public Boolean addFavouriteFilm(FavouriteFilm favouriteFilm, Query query) {
+	public Boolean addFavouriteFilm(FavouriteFilm favouriteFilm, UserQuery query) {
 		filmsMapper.insertFavouriteFilm(favouriteFilm);
 		filmsMapper.insertQueryData(query);
 		return true;

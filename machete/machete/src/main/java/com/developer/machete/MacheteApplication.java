@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.developer.machete.helpers.Scraper;
 import com.developer.machete.helpers.StringDecodeHelper;
 import com.developer.machete.model.FavouriteFilm;
-import com.developer.machete.model.Query;
+import com.developer.machete.model.UserQuery;
 import com.developer.machete.services.FilmsServices;
 import com.google.gson.Gson;
 
@@ -55,7 +55,7 @@ public class MacheteApplication {
 	@ResponseBody
 	public void createCourse(@RequestBody String data) {
 		data = stringDecodeHelper.decode(data);
-		Query queryData = new Gson().fromJson(data, Query.class);		
+		UserQuery queryData = new Gson().fromJson(data, UserQuery.class);		
 		filmsServices.insertQueryData(queryData);
 	}
 	
@@ -64,8 +64,8 @@ public class MacheteApplication {
 	public void saveFilm(@RequestBody String data) {
 		data = stringDecodeHelper.decode(data);
 		FavouriteFilm favouriteFilm = new Gson().fromJson(data, FavouriteFilm.class);
-		Query queryData = new Query();
-		queryData.setQuery("Add "+favouriteFilm.getImdb_id()+" to favourites");
+		UserQuery queryData = new UserQuery();
+		queryData.setUsrquery("Add "+favouriteFilm.getImdb_id()+" to favourites");
 		queryData.setIp(favouriteFilm.getIp());
 		filmsServices.addFavouriteFilm(favouriteFilm, queryData);
 	}
