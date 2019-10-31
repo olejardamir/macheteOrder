@@ -160,5 +160,7 @@ The React template has been taken from a secondary source in order to speed up t
 
 - Instead of relying on the IP address, we can use cookies to remember the users.
 
-- Log4j implementation.
+- Log4j implementation should be done too.
+
+- The test-cases using Mockito were not necessary since we would be testing the call and not the results of a call because those results would have been mocked. Therefore, it made no sense to do it but we could make the front-end test cases with Selenium neverhteless.
 
