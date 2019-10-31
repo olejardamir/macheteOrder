@@ -12,16 +12,24 @@ Everything will be done with the Chrome browser given the CORS plugin that works
 ## Main Setup
 ### Lamp stack
 $ sudo apt-get update && sudo apt-get upgrade
+
 $ sudo apt install apache2
+
 $ sudo apt install mariadb-server mariadb-client
+
 $ sudo apt install php php-common php-mysql php-gd php-cli 
+
 $ sudo apt install phpmyadmin
+
 $ sudo systemctl restart apache2
+
 $ sudo mysql -u root -p
 
 
 MariaDB [(none)]> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+
 MariaDB [(none)]> FLUSH PRIVILEGES;
 
 ## Database Setup
