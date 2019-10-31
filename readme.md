@@ -1,4 +1,7 @@
 # About
+
+Please note, only those functions that have been assigned have been developed, otherwise, it would not be following the assigned task(s). The extra functions as well as the improvements to a code have been listed under the "Improvements for the future release" section. Furthermore, we were asked to list the characters, while instead, we had to list the actors (which has been confirmed via e-mail).
+
 This is a tutorial on how to run this repository, assuming a blank copy of Ubuntu 18.04.2 LTS.
 
 The level of this document is intermediate for any Linux user.
