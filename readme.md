@@ -50,6 +50,11 @@ MariaDB [(none)]> FLUSH PRIVILEGES;
 MariaDB [(none)]> exit
 
 ## Database Setup
+
+[You can do this from phpmyadmin, or follow the steps below to load the starwars.sql]
+
+$ cd macheteOrder/
+
 ## Spring Boot Setup and Run
 mvn clean install
 mvn spring-boot:run
