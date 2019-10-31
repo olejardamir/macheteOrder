@@ -1,10 +1,8 @@
 # About
 
-Please note, only those functions that have been assigned have been developed, otherwise, it would not be following the assigned task(s). The extra functions as well as the improvements to a code have been listed under the "Warnings, and improvements for the future release" section. Furthermore, we were asked to list the characters, while instead, we had to list the actors (this error has been confirmed via e-mail).
-
 This is a tutorial on how to run this repository, assuming a blank copy of Ubuntu 18.04.2 LTS.
 
-The level of this document is intermediate for any Linux user.
+The level of this document is low-intermediate for any Linux user.
 
 Please choose the steps that you need, should you like to speed-up the setup process.
 
@@ -149,6 +147,8 @@ In order to get as much data as we can, we are not updating the favourite film, 
 The React template has been taken from a secondary source in order to speed up the development. Nevertheless, there were some major issues with React and axios not making the requests properly, and it is explained under the "Warnings, and improvements for the future release" section.
 
 # Warnings, and improvements for the future release
+
+- Please note, only those functions that have been assigned have been developed, otherwise, it would not be following the assigned task(s). Furthermore, we were asked to list the characters, while instead, we had to list the actors (this error has been confirmed via e-mail).
 
 - The main issue with this code is React's inability to send the proper POST and PUT request while working with Spring Boot. Requests to Spring Boot have been tested with a PostMan, with the same headers, and Spring Boot did not complain and throw error messages like it did with React. This has been solved by using "application/x-www-form-urlencoded" header with the axios (same issue was happening with fetch) and using POST instead of a PUT. The result is very ugly since we are getting the string withing a Spring Boot that is not in JSON format and that needs to be re-formatted. Again, this is an issue with React.js !
 
