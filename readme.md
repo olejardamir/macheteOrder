@@ -20,4 +20,6 @@ mvn spring-boot:run
 ## Additional tools
 CORS plugin for Chrome
 
-
+# General Overview of the Database Tables
+# General Overview of the Spring Boot Functions
+# General Overview of the React.js Functions
