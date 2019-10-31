@@ -1,6 +1,6 @@
 # About
 
-Please note, only those functions that have been assigned have been developed, otherwise, it would not be following the assigned task(s). The extra functions as well as the improvements to a code have been listed under the "I Warnings, and improvements for the future release" section. Furthermore, we were asked to list the characters, while instead, we had to list the actors (this error has been confirmed via e-mail).
+Please note, only those functions that have been assigned have been developed, otherwise, it would not be following the assigned task(s). The extra functions as well as the improvements to a code have been listed under the "Warnings, and improvements for the future release" section. Furthermore, we were asked to list the characters, while instead, we had to list the actors (this error has been confirmed via e-mail).
 
 This is a tutorial on how to run this repository, assuming a blank copy of Ubuntu 18.04.2 LTS.
 
