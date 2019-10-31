@@ -160,3 +160,5 @@ The React template has been taken from a secondary source in order to speed up t
 
 - Instead of relying on the IP address, we can use cookies to remember the users.
 
+- Log4j implementation.
+
