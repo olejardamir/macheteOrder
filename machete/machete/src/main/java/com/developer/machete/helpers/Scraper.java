@@ -37,12 +37,12 @@ public class Scraper {
 	}
 
 	private void getMovieData(List<Order> parsedOrder, ArrayList<Films> queries) {
-		for(Order order:parsedOrder) {
+		parsedOrder.forEach(order->{
 	    	Films tmpFilm = new Films();
 	    	MovieData movieData = scrapeOmd(order);
 	    	setFilmVariables(order, tmpFilm, movieData);
-	    	queries.add(tmpFilm);	
-	    }
+	    	queries.add(tmpFilm);
+		});
 	}
 
 	private void setFilmVariables(Order order, Films tmpFilm, MovieData movieData) {

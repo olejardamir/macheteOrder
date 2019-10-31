@@ -19,7 +19,6 @@ public class StringDecodeHelper {
 				data = data.substring(0, data.length() - 1);
 			}
 		} catch (UnsupportedEncodingException e) {
-			// log4j should be implemented here
 		}
 		return data;
 	}

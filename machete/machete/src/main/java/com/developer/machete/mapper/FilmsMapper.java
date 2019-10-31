@@ -20,8 +20,8 @@ public interface FilmsMapper {
     List<Films> getMacheteOrder();
  
     
-    @Insert("insert into queries(query,ip) values(#{query},#{ip})")
-    void insertQueryData(UserQuery query);
+    @Insert("insert into queries(usrquery,ip) values(#{usrquery},#{ip})")
+    void insertQueryData(UserQuery usrquery);
     
     @Insert("insert into favourites(imdb_id,ip) values(#{imdb_id},#{ip})")
 	void insertFavouriteFilm(FavouriteFilm favouriteFilm);

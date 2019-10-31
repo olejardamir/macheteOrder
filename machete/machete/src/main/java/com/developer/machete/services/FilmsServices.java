@@ -32,8 +32,8 @@ public class FilmsServices {
 		return gson.toJson(films);
 	}
 	
- 	public Boolean insertQueryData(UserQuery query) { 
-		filmsMapper.insertQueryData(query);
+ 	public Boolean insertQueryData(UserQuery usrquery) { 
+		filmsMapper.insertQueryData(usrquery);
 		return true;
 	}
 
@@ -50,9 +50,7 @@ public class FilmsServices {
 	}
 
 	public Boolean insertFilmDB(List<Films> scrapeAPIs) {
-		for(Films film:scrapeAPIs) {
-			filmsMapper.insertFilm(film);
-		}
+		scrapeAPIs.forEach(film -> {filmsMapper.insertFilm(film);});
 		return true;
 	}
 }

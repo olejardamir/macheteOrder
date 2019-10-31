@@ -19,6 +19,13 @@ body{
   text-align: center;
 }
 
+#favfilmconfirm {
+    display: inline;
+    position: relative;
+    bottom: 45px;
+    left: 33%;
+}
+
 input[type="radio"] {
   -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
   -moz-appearance: checkbox;    /* Firefox */
