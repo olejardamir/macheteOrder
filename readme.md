@@ -55,6 +55,16 @@ MariaDB [(none)]> exit
 
 $ cd macheteOrder/
 
+$ sudo mysql -u root -p
+
+MariaDB [(none)]> CREATE DATABASE starwars;
+
+MariaDB [dbname]> USE starwars;
+
+MariaDB [(none)]> exit
+
+$ mysql -u admin -p starwars < starwars.sql
+
 ## Spring Boot Setup and Run
 mvn clean install
 mvn spring-boot:run
