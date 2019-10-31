@@ -10,7 +10,7 @@ Technology stack is: MySQL (Maria fork) for database, Spring-Boot for the backen
 Everything will be done with the Chrome browser given the CORS plugin that works out-of-box.
 
 ## Main Setup
-### Lamp stack
+### Lamp stack with phpmyadmin
 $ sudo apt-get update && sudo apt-get upgrade
 
 $ sudo apt install apache2
