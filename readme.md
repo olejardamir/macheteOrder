@@ -43,9 +43,11 @@ $ sudo mysql -u root -p
 
 MariaDB [(none)]> CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
 
-MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost' WITH GRANT OPTION;
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON \*.\* TO 'admin'@'localhost' WITH GRANT OPTION;
 
 MariaDB [(none)]> FLUSH PRIVILEGES;
+
+MariaDB [(none)]> exit
 
 ## Database Setup
 ## Spring Boot Setup and Run
