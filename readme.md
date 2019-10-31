@@ -22,7 +22,7 @@ mvn spring-boot:run
 CORS plugin for Chrome
 
 # General Overview of the Database Tables
-No extra data or columns, other than what was necessary to complete the task was entered. All tables are in NF1 given the simplicity of a task that we are performing. Furthermore, there is no need for any further normalization since it would simply complicate the queries and slow-down the processing as well as the production.
+No extra data or columns were entered. All tables are in NF1 given the simplicity of a task that we are performing. Furthermore, there is no need for any further normalization since it would simply complicate the queries and slow-down the processing as well as the production.
 
 There are 3 tables. One table represents the scraped data, other represents the actions the user performed, and third table represents the saved favourite films that user chose from the UI.
 
