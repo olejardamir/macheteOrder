@@ -1,4 +1,4 @@
-This is a tutorial on how to run this repository, assuming a blank copy of Ubuntu.
+This is a tutorial on how to run this repository, assuming a blank copy of Ubuntu 18.04.2 LTS.
 
 The level of this document is intermediate.
 
