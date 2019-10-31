@@ -8,15 +8,25 @@ export default class filmList extends React.Component {
         this.state = {
             films: [],
             isToggleOn: true,
-            selectedOption: "tt0076759"
+            selectedOption: "tt0076759",
+            favfilm: null
         }
         // This binding is necessary to make `this` work in the callback
         this.toggleFilms = this.toggleFilms.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick(){
+        this.setState({
+            favfilm : "SAVED!"
+        })
+    }
+
 
     handleOptionChange = changeEvent => {
         this.setState({
-            selectedOption: changeEvent.target.value
+            selectedOption: changeEvent.target.value,
+            favfilm: null
         });
     };
 
@@ -25,17 +35,16 @@ export default class filmList extends React.Component {
 
         const postdata = this.getFavouritePayload();
 
-
         axios.post('http://localhost:9095/saveFilm',
             postdata, {
                 headers: {
                     'content-type': 'application/x-www-form-urlencoded'
                 }
             })
-            .then(function(response) {
+            .then(function (response) {
                 console.log(response);
             })
-            .catch(function(error) {
+            .catch(function (error) {
                 console.log(error);
             });
 
@@ -53,7 +62,7 @@ export default class filmList extends React.Component {
     }
 
     toggleFilms() {
-        const postdata = this.getQueryJson();
+        const postdata = this.getUserQueryJson();
 
         function collectData() {
 
@@ -63,10 +72,10 @@ export default class filmList extends React.Component {
                         'content-type': 'application/x-www-form-urlencoded'
                     }
                 })
-                .then(function(response) {
+                .then(function (response) {
                     console.log(response);
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
         }
@@ -97,10 +106,10 @@ export default class filmList extends React.Component {
         }
     }
 
-    getQueryJson() {
+    getUserQueryJson() {
         var ip = require('ip');
         const postdata = '{' +
-            '"query":"' + (this.state.isToggleOn ? 'Show machete view' : 'Show default view') + '",' +
+            '"usrquery":"' + (this.state.isToggleOn ? 'Show machete view' : 'Show default view') + '",' +
             '"ip":"' + ip.address() + '"' +
             '}';
         return postdata;
@@ -118,12 +127,11 @@ export default class filmList extends React.Component {
 
 
     render() {
-        if( this.state.films[0] === undefined ) {
+        if (this.state.films[0] === undefined) {
             return <div>Loading...</div>
         }
         return (
             <div>
-
 
 
                 <div className="container">
@@ -137,52 +145,47 @@ export default class filmList extends React.Component {
                             <form onSubmit={this.handleFormSubmit}>
 
 
+                                {this.state.films.map(film =>
+                                    <div className="form-check">
 
 
-                { this.state.films.map(film =>
-                    <div className="form-check">
+                                        <div id="filmtitle">{film.title}</div>
+                                        <div id="poster">
+                                            <img src={'http://img.omdbapi.com/?i=' + film.imdb_id + '&apikey=57ec2f6d'}
+                                                 width='40%'></img>
+                                            <div id="checkboxdiv">
+                                                <label>
+                                                    <input
+                                                        type="radio"
+                                                        name="react-tips"
+                                                        value={film.imdb_id}
+                                                        checked={this.state.selectedOption === film.imdb_id}
+                                                        onChange={this.handleOptionChange}
+                                                        className="form-check-input"
+                                                    />
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="actors">Actors: {film.actors}.</div>
 
-
-                        <div id="filmtitle">{film.title}</div>
-                        <div id="poster">
-                            <img src={'http://img.omdbapi.com/?i='+film.imdb_id+'&apikey=57ec2f6d'} width='40%' ></img>
-                            <div id="checkboxdiv">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="react-tips"
-                                        value={film.imdb_id}
-                                        checked={this.state.selectedOption===film.imdb_id}
-                                        onChange={this.handleOptionChange}
-                                        className="form-check-input"
-                                    />
-                                </label>
-                            </div>
-                        </div>
-                        <div id="actors">Actors: {film.actors}.</div>
-
-                    </div>
-                )}
-
+                                    </div>
+                                )}
 
 
                                 <div className="form-group" id="savebttn">
-                                    <button className="btn btn-primary mt-2" type="submit">
+                                    <button className="btn btn-primary mt-2" type="submit" onClick={this.handleClick}>
                                         Save my favourite film
                                     </button>
                                 </div>
 
-
                             </form>
+                            <div id="favfilmconfirm">
+                                {this.state.favfilm!=null ? 'SAVED!':''}
+                            </div>
 
                         </div>
                     </div>
                 </div>
-
-
-
-
-
 
 
             </div>
